@@ -69,18 +69,14 @@
   }
 }
 
-/* Mengubah warna teks dan ikon di navbar */
-.navbar a.nav-link {
-    color: #FFFFFF; /* Warna putih */
+/* Mengatur warna teks dan ikon di navbar menjadi hitam */
+.navbar a.nav-link, .navbar a.nav-link i {
+    color: #000000; /* Warna hitam */
 }
 
-.navbar a.nav-link:hover {
-    color: #1DB954; /* Warna hijau Spotify */
-}
-
-/* Mengubah warna ikon media sosial */
-.navbar a.nav-link i {
-    color: #FFFFFF; /* Warna putih */
+/* Mengatur background navbar menjadi transparan */
+.navbar {
+    background-color: transparent;
 }
 
 /* Mengatur header agar kontennya berada di tengah */
