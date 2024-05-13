@@ -82,9 +82,14 @@
 /* Mengatur header agar kontennya berada di tengah */
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* Menambahkan jarak antara teks selamat datang dan tombol */
+header h1 {
+    margin-bottom: 20px; /* Atur sesuai kebutuhan */
 }
 
 /* Mengatur footer agar selalu berada di bawah halaman */
@@ -94,4 +99,5 @@ footer {
     right: 0;
     bottom: 0;
     width: 100%;
+}
 }
