@@ -1,13 +1,13 @@
 /* styles.css */
 @media (max-width: 991px) {
   .navbar-scroll {
-    background-color: #fff;
+    background-color: #000000; /* Warna hitam */
   }
      
   .navbar-scroll .navbar-brand,
   .navbar-scroll .nav-link,
   .navbar-scroll .fa-bars {
-    color: #4f4f4f !important;
+    color: #FFFFFF; /* Warna putih */
   }         
 }
 
@@ -19,7 +19,7 @@
 .navbar-scroll .navbar-brand,
 .navbar-scroll .nav-link,
 .navbar-scroll .fa-bars {
-  color: #fff;
+  color: #FFFFFF; /* Warna putih */
 }
 
 .navbar-scroll {
@@ -69,3 +69,39 @@
   }
 }
 
+/* Mengatur warna teks dan ikon di navbar menjadi hitam */
+.navbar a.nav-link, .navbar a.nav-link i {
+    color: #000000; /* Warna hitam */
+}
+
+/* Mengatur background navbar menjadi transparan */
+.navbar {
+    background-color: transparent;
+}
+
+/* Mengatur header agar kontennya berada di tengah secara horizontal dan vertikal */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menambahkan ini untuk vertikal centering */
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Mengatur tinggi header sama dengan tinggi viewport */
+}
+
+/* Menambahkan jarak antara teks selamat datang dan tombol */
+header h1 {
+    margin-bottom: 20px; /* Atur sesuai kebutuhan */
+}
+
+/* Mengatur footer agar selalu berada di bawah halaman */
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+}
+}
+}
