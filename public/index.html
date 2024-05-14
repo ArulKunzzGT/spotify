@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Pastikan link ke file CSS Anda -->
 </head>
 <body>
-    <div
-  class="bg-black px-4 py-3 text-white sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
->
+    <div style="background-color: #0D47A1;" class="px-4 py-3 text-white sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
   <p class="text-center font-medium sm:text-left">
     Beta testing
     <br class="sm:hidden" />
@@ -35,27 +33,34 @@
 </div>
     <header>
     <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-gray-900">
-                Selamat Datang di Spotify Clone
-            </h1>
-            <!-- Base -->
-            <a class="group relative inline-block focus:outline-none focus:ring" href="/home">
-                <span
-                    class="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-green-500 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
-                    style="background-color: #1DB954;"
-                ></span>
+<!--
+  Heads up! 👋
 
-                <span
-                    class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest text-black group-active:text-opacity-75"
-                >
-                    GET START
-                </span>
-            </a>
-        </div>
-    </header>
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
 
+<section
+  class="overflow-hidden bg-[url(https://th.bing.com/th/id/OIG3.kan45IZ2ufG6U4OcyqPt?pid=ImgGn)] bg-cover bg-top bg-no-repeat"
+>
+  <div class="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
+    <div class="text-center ltr:sm:text-left rtl:sm:text-right">
+      <h2 class="text-2xl font-bold text-white sm:text-3xl md:text-5xl">Spotify Clone</h2>
+
+      <p class="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
+        Spotify Clone is a web application that allows users to search, play, and enjoy music online.
+      </p>
+
+      <div class="mt-4 sm:mt-8">
+        <a
+          href="#"
+          class="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+        >
+          Get Start
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- Footer -->
     <footer class="bg-white shadow mt-8">
         <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
