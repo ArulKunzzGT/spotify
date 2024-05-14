@@ -1,21 +1,10 @@
 /* styles.css */
-@media (max-width: 991px) {
-  .navbar-scroll {
-    background-color: #000000; /* Warna hitam */
-  }
-     
-  .navbar-scroll .navbar-brand,
-  .navbar-scroll .nav-link,
-  .navbar-scroll .fa-bars {
-    color: #FFFFFF; /* Warna putih */
-  }         
-}
-
 .navbar-brand {
   letter-spacing: 3px;
   font-size: 2rem;
   font-weight: 500;
 }
+
 .navbar-scroll .navbar-brand,
 .navbar-scroll .nav-link,
 .navbar-scroll .fa-bars {
@@ -23,10 +12,12 @@
 }
 
 .navbar-scroll {
+  background-color: #000000; /* Warna hitam */
   box-shadow: none;
 }
 
 .navbar-scrolled {
+  background-color: #fff;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -34,44 +25,6 @@
 .navbar-scrolled .nav-link,
 .navbar-scrolled .fa-bars {
   color: #4f4f4f;
-}
-
-.navbar-scrolled {
-  background-color: #fff;
-}
-
-@media (max-width: 450px) {
-  #intro {
-    height: 950px !important;
-  }
-}
-
-@media (min-width: 550px) and (max-width: 750px) {
-  #intro {
-    height: 1100px !important;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 990px) {
-  #intro {
-    height: 600px !important;
-  }
-}
-
-.display-1 {
-  font-weight: 500 !important;
-  letter-spacing: 40px;
-}
-
-@media (min-width: 1600px) {
-  .display-1 {
-    font-size: 10rem;
-  }
-}
-
-/* Mengatur warna teks dan ikon di navbar menjadi hitam */
-.navbar a.nav-link, .navbar a.nav-link i {
-    color: #000000; /* Warna hitam */
 }
 
 /* Mengatur background navbar menjadi transparan */
@@ -83,21 +36,17 @@
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Menambahkan ini untuk vertikal centering */
+    justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Mengatur tinggi header sama dengan tinggi viewport */
-}
-
-/* Menambahkan jarak antara teks selamat datang dan tombol */
-header h1 {
-    margin-bottom: 20px; /* Atur sesuai kebutuhan */
+    height: 100vh;
 }
 
 /* Mengatur footer agar selalu berada di bawah halaman */
 html, body {
     height: 100%;
     margin: 0;
+    background-color: #000; /* Warna hitam */
 }
 
 body {
@@ -108,4 +57,5 @@ body {
 
 footer {
     margin-top: auto;
+}
 }
