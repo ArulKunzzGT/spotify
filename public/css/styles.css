@@ -1,38 +1,29 @@
-/* styles.css */
 .navbar-brand {
   letter-spacing: 3px;
   font-size: 2rem;
   font-weight: 500;
 }
-
 .navbar-scroll .navbar-brand,
 .navbar-scroll .nav-link,
 .navbar-scroll .fa-bars {
   color: #FFFFFF; /* Warna putih */
 }
-
 .navbar-scroll {
   background-color: #000000; /* Warna hitam */
   box-shadow: none;
 }
-
 .navbar-scrolled {
   background-color: #fff;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
 }
-
 .navbar-scrolled .navbar-brand,
 .navbar-scrolled .nav-link,
 .navbar-scrolled .fa-bars {
   color: #4f4f4f;
 }
-
-/* Mengatur background navbar menjadi transparan */
 .navbar {
     background-color: transparent;
 }
-
-/* Mengatur header agar kontennya berada di tengah secara horizontal dan vertikal */
 header {
     display: flex;
     flex-direction: column;
@@ -41,21 +32,16 @@ header {
     text-align: center;
     height: 100vh;
 }
-
-/* Mengatur footer agar selalu berada di bawah halaman */
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #000; /* Warna hitam */
+    background-color: #121212; /* Warna latar belakang baru */
 }
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 footer {
     margin-top: auto;
-}
 }
