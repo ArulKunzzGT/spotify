@@ -43,5 +43,69 @@ body {
     min-height: 100vh;
 }
 footer {
-    margin-top: auto;
+  background-image: linear-gradient(to right, #9e3f84, #af96e4, #008dc4); /* Gradien pink ke biru muda */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Mengatur jarak antara teks dan tombol */
+  align-items: center; /* Memposisikan elemen vertikal di tengah */
+  position: relative; /* Untuk posisi absolut elemen anak */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-left {
+  text-align: left;
+}
+.footer-left h3{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.donate-button {
+  background-color: white; /* Warna latar belakang hitam */
+  color: black; /* Warna teks putih agar kontras */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* Membuat sudut membulat (semakin besar nilainya, semakin bulat) */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transisi untuk semua properti */
+  display: inline-flex; /* Menggunakan flexbox untuk centering icon */
+  align-items: center; /* Vertikal centering */
+  justify-content: center; /* Horizontal centering */
+  font-weight: bold; /* Menebalkan teks */
+}
+
+.donate-button:hover {
+  background-color: #0056b3; /* Warna biru saat hover */
+  transform: scale(1.1); /* Efek membesar saat hover */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Menambahkan bayangan saat hover */
+}
+
+.donate-button:active {
+  transform: scale(0.95); /* Efek mengecil saat ditekan */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* Mengurangi bayangan saat ditekan */
+}
+/* Opsi dengan Icon */
+.donate-button svg {
+  margin-left: 5px; /* Memberi jarak antara teks dan icon */
+  width: 1em;
+  height: 1em;
+}
+@media (max-width: 768px){
+  footer{
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-left{
+      margin-bottom: 10px;
+  }
+  .footer-right{
+      text-align: center;
+  }
 }

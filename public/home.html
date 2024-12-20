@@ -4,31 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Home || Spotify</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" type ="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-800 text-white min-h-screen flex justify-center items-center">
-    <div class="w-full max-w-4xl bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg overflow-hidden shadow-lg">
-        <div class="p-8">
+<body class="bg-black text-white">
+    <nav class="fixed top-0 left-0 right-0 flex justify-between items-center p-4 bg-black text-white z-10 border-zinc-600">
+        <div class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify Logo" class="w-10 h-10 mr-2">
+        </div>
+        <div class="flex items-center flex-grow justify-center">
+          <a href="/" class="relative mr-2">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center transition duration-300 hover:scale-125">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h12a1 1 0 001-1v-10" />
+              </svg>
+            </div>
+          </a>
+          <div class="relative w-full max-w-md">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 focus:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input type="text" id="searchInput"
+              class="w-full pl-10 pr-10 py-2 rounded-full border-black focus:outline-none focus:ring-2 focus:ring-indigo-200 text-white placeholder-gray bg-zinc-800 focus:border-white"
+              placeholder="Cari musik, artis, atau podcast">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2">
+              <div class="border-l-[0.5px] border-white h-6 mr-1"></div>
+              <a href="#" class="relative mr-2">
+                <div class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center transition duration-300 hover:scale-125">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12h-18" />
+                  </svg>
+                </div>
+              </a>
+          </div>                                   
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 mt-24 bg-spotify-gray">
             <h1 class="text-3xl font-bold text-center text-white flex items-center justify-center mb-6">
-                <img src="https://cdn.miftah.biz.id/file/6635257d2d7f6.png" alt="Spotify Logo"
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify Logo"
                     class="w-8 h-8 mr-2">
                 Spotify
             </h1>
-            <div class="relative mx-auto max-w-md">
-                <input id="searchInput"
-                    class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:border-indigo-500 text-gray-800 placeholder-gray-500"
-                    placeholder="Search for music...">
-                <div class="absolute top-0 right-0 mt-2 mr-4">
-                    <svg class="w-6 h-6 text-gray-500 cursor-pointer hover:text-purple-500" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
-                        viewBox="0 0 24 24" onclick="searchTracks()">
-                        <path d="M20 20l-4.585-4.586M14 10a6 6 0 1 0-12 0 6 6 0 0 0 12 0z"></path>
-                    </svg>
-                </div>
-            </div>
         </div>
         <div id="musicGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>
     </div>
@@ -58,10 +80,26 @@
     </div>
 </div>
 
+<script>
+    const searchInput = document.getElementById('search-input');
+
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            performSearch();
+        }
+    });
+    function performSearch() {
+      const searchTerm = searchInput.value;
+      if (searchTerm.trim() !== "") { 
+        console.log("Mencari:", searchTerm);
+      }
+    }
+</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.3.2/howler.min.js"></script>
     <script src="./script.js"></script>
+
 </body>
 </html>

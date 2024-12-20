@@ -1,11 +1,13 @@
 {
     "name": "spotify-clone",
     "version": "1.0.0",
-    "description": "",
+    "description": "Aplikasi streaming musik mirip Spotify",
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "postinstall": "patch-package"
+      "postinstall": "patch-package",
+      "start" : "node index.js",
+      "dev" : "nodemon index.js"
     },
     "keywords": [],
     "author": "",
@@ -16,6 +18,7 @@
     },
     "devDependencies": {
       "patch-package": "^6.4.7",
+      "nodemon" : "^2.0.6",
       "postinstall-postinstall": "^2.0.0"
     }
   }
